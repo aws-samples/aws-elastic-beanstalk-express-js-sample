@@ -1,11 +1,6 @@
-## My Project
+# AWS Elastic Beanstalk Node.js Sample App
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+This repository contains a sample Node.js web application built using [Express](https://expressjs.com/), meant to be used as part of the AWS DevOps Learning Path.
 
 ## Security
 
