@@ -1,13 +1,17 @@
 {
-  "name": "documentation",
-  "description": "Unity Container Documentation",
+  "name": "aws-elastic-beanstalk-express-js-sample",
+  "version": "1.0.0",
+  "description": "Sample Node.js (Express) app for AWS Elastic Beanstalk",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unitycontainer/documentation.git"
+    "url": "git+https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample.git"
   },
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.0",
-    "gulp-exec": "^3.0.2"
+  "license": "MIT-0",
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

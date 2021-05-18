@@ -1,9 +1,0 @@
-[submodule "src/Abstractions"]
-	path = src/Abstractions
-	url = https://github.com/unitycontainer/abstractions.git
-[submodule "src/Container"]
-	path = src/Container
-	url = https://github.com/unitycontainer/container.git
-[submodule "src/SpecificationTests"]
-	path = src/SpecificationTests
-	url = https://github.com/unitycontainer/specification-tests.git
