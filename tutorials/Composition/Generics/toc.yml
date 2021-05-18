@@ -1,0 +1,6 @@
+- name: Metadata
+  uid: Tutorial.Generics.Metadata
+- name: Lazy
+  uid: Tutorial.Lazy
+- name: Deferred
+  uid: Tutorial.Deferred

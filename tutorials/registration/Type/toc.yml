@@ -1,0 +1,12 @@
+- name: Constructor
+  href: Constructor/toc.yml
+  topicUid: Tutorial.Injection.Constructor
+- name: Fields
+  uid: Tutorial.Injection.Field
+- name: Properties
+  uid: Tutorial.Injection.Property
+- name: Method Invocation
+  uid: Tutorial.Injection.Method
+- name: Dependency Injection
+  href: Injection/toc.yml
+  topicUid: Tutorial.Injection
