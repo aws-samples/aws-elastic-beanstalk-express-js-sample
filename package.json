@@ -13,5 +13,10 @@
   "license": "MIT-0",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-exec": "^3.0.2"
   }
 }

@@ -1,0 +1,16 @@
+  - name: Transient
+    uid: Tutorial.Lifetime.Transient
+  - name: Singleton
+    uid: Tutorial.Lifetime.Singleton
+  - name: Container
+    uid: Tutorial.Lifetime.Container
+  - name: Container Transient
+    uid: Tutorial.Lifetime.Container.Transient
+  - name: Hierarchical
+    uid: Tutorial.Lifetime.Hierarchical
+  - name: Per Resolve
+    uid: Tutorial.Lifetime.Resolve
+  - name: Per Thread
+    uid: Tutorial.Lifetime.Thread
+  - name: External
+    uid: Tutorial.Lifetime.External

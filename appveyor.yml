@@ -1,0 +1,57 @@
+image: Visual Studio 2017
+
+environment:
+  access_token:
+    secure: JMhbKA4Bre9ZaQ8No630DmjhmLGfRY1uaNBjqvKCewFK0Jn2BBva3TzHebfUwt5H
+
+init:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "unity@eniks.com"
+  - git config --global user.name "Build Job"
+
+install:
+  - git submodule --quiet update --init  --recursive
+  - git clone https://github.com/unitycontainer/unitycontainer.github.io.git unitycontainer.github.io
+  - cmd: nuget restore src\Abstractions\src\Unity.Abstractions.csproj -Verbosity quiet
+  - cmd: nuget restore src\Container\src\Unity.Container.csproj -Verbosity quiet
+  - cmd: nuget install docfx.console -ExcludeVersion 
+
+before_build:
+  - ps: |
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
+        {
+            # This hack is required at the moment
+            $VisualStudioVersion = "15.0";
+            $DotnetSDKVersion = "2.0.0";
+
+            # Get dotnet paths
+            $MSBuildExtensionsPath = "C:\Program Files\dotnet\sdk\" + $DotnetSDKVersion;
+            $MSBuildSDKsPath = $MSBuildExtensionsPath + "\SDKs";
+
+            # Get Visual Studio install path
+            $VSINSTALLDIR =  $(Get-ItemProperty "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\SxS\VS7").$VisualStudioVersion;
+
+            # Add Visual Studio environment variables
+            $env:VisualStudioVersion = $VisualStudioVersion;
+            $env:VSINSTALLDIR = $VSINSTALLDIR;
+
+            # Add dotnet environment variables
+            $env:MSBuildExtensionsPath = $MSBuildExtensionsPath;
+            $env:MSBuildSDKsPath = $MSBuildSDKsPath;
+
+            # Build our docs
+            Write-Host "`n[Build our docs]" -ForegroundColor Green
+        }
+
+build_script:
+  - cmd: .\docfx.console\tools\docfx docfx.json
+
+on_success:
+  - cmd: cd unitycontainer.github.io
+  - git config --global credential.helper store
+  - git config --global core.autocrlf false
+  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git add -A
+  - git commit --all --message="%APPVEYOR_BUILD_VERSION%" 
+  - git push --force origin master

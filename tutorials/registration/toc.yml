@@ -1,0 +1,9 @@
+- name: Metadata
+  uid: Tutorial.Registration.Metadata
+- name: Instance Registration
+  uid: Tutorial.Registration.Instance
+- name: Factory Registration
+  uid: Tutorial.Registration.Factory
+- name: Type Registration
+  href: Type/toc.yml
+  topicUid: Tutorial.Registration.Type

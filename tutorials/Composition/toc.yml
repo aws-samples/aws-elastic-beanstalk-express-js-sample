@@ -1,0 +1,20 @@
+- name: Resolution
+  href: Resolution/toc.yml
+  topicUid: Tutorial.Resolution
+- name: Build-Up
+  href: BuildUp/toc.yml
+  topicUid: Tutorial.BuildUp
+- name: Type Mapping
+  href: Mapping/toc.yml
+  topicUid: Tutorial.Mapping
+- name: Selection
+  href: Selection/toc.yml
+  topicUid: Tutorial.Resolution.Selection
+- name: Generics
+  href: Generics/toc.yml
+  topicUid: Tutorial.Generics
+- name: Collections
+  href: collections.md
+- name: Overrides
+  href: Overrides/toc.yml
+  topicUid: Tutorial.Resolution.Override

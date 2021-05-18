@@ -1,0 +1,10 @@
+- name: Automatic Selection
+  uid: Tutorial.Injection.Constructor.Implicit
+- name: Attribute Annotation
+  uid: Tutorial.Injection.Constructor.Annotation
+- name: Invoking default ctor()
+  uid: Tutorial.Injection.Constructor.Default
+- name: Select By Parameters Count
+  uid: Tutorial.Injection.Constructor.Count
+- name: Select By Parameter Types 
+  uid: Tutorial.Injection.Constructor.Types

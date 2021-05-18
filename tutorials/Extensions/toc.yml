@@ -1,0 +1,8 @@
+- name: Diagnostic
+  uid: Tutorial.Extension.Diagnostic
+- name: Legacy
+  uid: Tutorial.Extension.Legacy
+- name: Force Activation
+  uid: Tutorial.Extension.Activation
+- name: Force Compilation
+  uid: Tutorial.Extension.Compilation

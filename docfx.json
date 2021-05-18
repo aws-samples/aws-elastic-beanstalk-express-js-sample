@@ -1,0 +1,74 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+      	  "files": [
+      		  "src/Abstractions/src/Unity.Abstractions.csproj"
+      	  ]
+        }
+      ],
+      "dest": "api",
+      "properties": { "TargetFramework": "netstandard2.0" }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "Articles/**.md",
+          "Articles/**/toc.yml",
+          "Specs/**.md",
+          "Specs/**/toc.yml",
+          "Tutorials/**.md",
+          "Tutorials/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "unitycontainer.github.io/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "exclude": [
+          "obj/**",
+          "unitycontainer.github.io/**"
+        ]
+      }
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "dest": "unitycontainer.github.io",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata" :
+    {
+      "_appTitle" : "Unity Container",
+      "_appFooter" : "<span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>",
+      "_appLogoPath" : "images/logo.svg",
+      "_appFaviconPath": "images/favicon.png"
+    }  
+  }
+}
