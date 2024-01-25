@@ -1,17 +1,14 @@
 {
-  "name": "aws-elastic-beanstalk-express-js-sample",
-  "version": "1.0.0",
-  "description": "Sample Node.js (Express) app for AWS Elastic Beanstalk",
-  "main": "app.js",
+  "name": "nodejs-example-express-dynamo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "ejs": "latest",
+    "aws-sdk": "latest",
+    "express": "latest",
+    "body-parser": "latest"
+  },
   "scripts": {
     "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample.git"
-  },
-  "license": "MIT-0",
-  "dependencies": {
-    "express": "^4.17.3"
   }
 }
