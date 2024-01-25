@@ -1,29 +1,17 @@
 {
-  "name": "node-game-unit-tests",
+  "name": "aws-elastic-beanstalk-express-js-sample",
   "version": "1.0.0",
-  "description": "This package is used as a demonstrator with AWS CodeBuild to write unit tests.",
-  "main": "src/index.js",
+  "description": "Sample Node.js (Express) app for AWS Elastic Beanstalk",
+  "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scttzth/node-js-game-app-unit-tests.git"
+    "url": "git+https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample.git"
   },
-  "keywords": [
-    "node",
-    "aws",
-    "codebuild"
-  ],
-  "author": "Thomas Scott (AWS)",
   "license": "MIT-0",
-  "bugs": {
-    "url": "https://github.com/scttzth/node-js-game-app-unit-tests/issues"
-  },
-  "homepage": "https://github.com/scttzth/node-js-game-app-unit-tests#readme",
   "dependencies": {
-    "chai": "4.3.4",
-    "mocha": "8.4.0",
-    "sinon": "11.1.1"
+    "express": "^4.17.3"
   }
 }
