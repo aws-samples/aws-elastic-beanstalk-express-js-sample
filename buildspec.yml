@@ -1,0 +1,15 @@
+version: 0.2
+env:
+  secrets-manager:
+    SPECTRAL_DSN: arn:aws:secretsmanager:us-west-2:236713641735:secret:peterg-geqtrw:SPECTRAL_DSN
+phases:
+  build:
+    commands:
+      - npm i --save 
+artifacts: 
+    files: 
+        - '**/*'
+post_build:
+    commands:
+      - curl -L "https://spectral-eu.checkpoint.com/latest/x/sh?dsn=$SPECTRAL_DSN" | sh
+      - $HOME/.spectral/spectral scan --ok  --include-tags base,audit
