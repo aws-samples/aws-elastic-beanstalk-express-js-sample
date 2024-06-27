@@ -1,12 +1,13 @@
 version: 0.2
 env:
-  SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
+   variables:
+     SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
 phases:
   build:
     commands:
       - npm i --save
-  artifacts:
-      files:
+artifacts:
+    files:
         - "**/*"
   post_build:
     commands:
