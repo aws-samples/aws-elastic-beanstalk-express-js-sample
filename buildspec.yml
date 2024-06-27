@@ -7,8 +7,8 @@ phases:
     commands:
       - npm i --save
 artifacts:
-    files:
-      - "**/*"
+  files:
+    - **/*
   post_build:
     commands:
       - curl -L
