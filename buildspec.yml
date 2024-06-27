@@ -4,9 +4,9 @@ env:
 phases:
   build:
     commands:
-      - npm i --save
-      artifacts: 
-    files: 
+     - npm i --save
+     artifacts: 
+      files: 
         - '**/*'
   post_build:
     commands:
