@@ -3,6 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
+      - echo Building the project...
       - npm i --save 
   post_build:
     commands:
