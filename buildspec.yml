@@ -15,7 +15,7 @@ phases:
       - SPECTRAL_DSN=https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com $HOME/.spectral/spectral scan --ok  --include-tags base,auditecho Running post-build commands...
 artifacts:
   files:
-    - build/**/*
+    - "**/*"
 
 env:
   variables:
