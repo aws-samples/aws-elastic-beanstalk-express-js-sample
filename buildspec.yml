@@ -12,8 +12,6 @@ phases:
 artifacts:
   files:
     - "**/*"
-
 env:
   variables:
-    SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
-       
+    SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com   
