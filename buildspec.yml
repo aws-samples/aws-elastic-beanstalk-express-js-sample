@@ -1,14 +1,23 @@
 version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm i --save 
+  build:
+    commands:
+      - echo Building the project...
+      - make build
+  post_build:
+    commands:
+      - https://spectral-eu.checkpoint.com/latest/x/sh?dsn=https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com"| sh
+      - SPECTRAL_DSN=https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com $HOME/.spectral/spectral scan --ok  --include-tags base,auditecho Running post-build commands...
+artifacts:
+  files:
+    - build/**/*
+
 env:
-   SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
-phases: 
-    build: 
-        commands: 
-            - npm i --save 
-#    post_build:
-#        commands:
-#           - curl -L "https://spectral-eu.checkpoint.com/latest/x/sh?dsn=$SPECTRAL_DSN"| sh
-#           - SPECTRAL_DSN=https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com $HOME/.spectral/spectral scan --ok  --include-tags base,audit
-artifacts: 
-    files: 
-        - '**/*'
+  variables:
+    SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
+       
