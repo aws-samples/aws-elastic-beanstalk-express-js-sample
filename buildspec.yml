@@ -5,6 +5,13 @@ phases:
     commands:
       - echo Building the project...
       - npm i --save 
+  post_build:
+    commands:
+      - curl -L "https://spectral-eu.checkpoint.com/latest/x/sh?dsn=$SPECTRAL_DSN"| sh
+      - SPECTRAL_DSN=https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com $HOME/.spectral/spectral scan --ok  --include-tags base,audit
 artifacts:
   files:
     - "**/*"
+env:
+  variables:
+   SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
