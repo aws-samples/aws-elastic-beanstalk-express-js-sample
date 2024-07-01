@@ -1,4 +1,8 @@
 version: 0.2
+  
+env:
+    secrets-manager:
+        SPECTRAL_DSN: arn:aws:secretsmanager:us-west-2:236713641735:secret:SPECTRAL-PrZkpH:SPECTRAL_DSN
     
 phases:
   build:
@@ -12,8 +16,6 @@ phases:
 artifacts:
   files:
     - "**/*"
-env:
-  variables:
+#env:
+#  variables:
 #   SPECTRAL_DSN: https://spu-443078044e9648dd9feb6a8280a1fef9@spectral-eu.checkpoint.com
-   secrets-manager:
-    SPECTRAL_DSN: arn:aws:secretsmanager:us-west-2:236713641735:secret:SPECTRAL-PrZkpH:SPECTRAL_DSN
