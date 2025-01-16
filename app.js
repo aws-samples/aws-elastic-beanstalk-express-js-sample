@@ -4,7 +4,7 @@ const app = express();
 const port = 8080;
 
 app.use(cors());
-
+// KOMENTARAS
 app.get('/', (req, res) => res.send('Hello World from PagaliauSSS kazkas pavyko 5 !'));
 app.get('/user', (req, res) => res.send({
 	name: "petras",
