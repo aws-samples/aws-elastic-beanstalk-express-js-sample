@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src=""></script>
+<body>
+<div class="">
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</div>
+<script>
+    const user = {
+        name: "John Doe",
+        email: "john.doe@example.com"
+    };
+
+    fetch('http://localhost:8080/user', {
+        method: 'POST',
+        body: JSON.stringify(user)
+    })
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+    fetch('http://localhost:8080/user', {
+        method: 'GET',
+    })
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+</script>
+</body>
+</html>
