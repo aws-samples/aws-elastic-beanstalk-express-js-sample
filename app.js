@@ -4,8 +4,8 @@ const app = express();
 const port = 8080;
 
 app.use(cors());
-
-app.get('/', (req, res) => res.send('Hello World from PagaliauSSS kazkas pavyko 5 !'));
+// KOMENTARASss
+app.get('/', (req, res) => res.send(`Hello World from PagaliauSSS kazkas pavyko! Versija 7`));
 app.get('/user', (req, res) => res.send({
 	name: "petras",
 	email: "petras@gmail.com",
