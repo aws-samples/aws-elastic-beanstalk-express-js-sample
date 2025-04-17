@@ -10,6 +10,7 @@
     <style>
         :root {
             --primary-color: #e2231a;
+            /* RCB Red */
             --secondary-color: #333;
             --light-bg: rgba(255, 255, 255, 0.9);
             --dark-bg: rgba(0, 0, 0, 0.6);
@@ -25,7 +26,8 @@
         body {
             font-family: 'Roboto', sans-serif;
             color: var(--secondary-color);
-            background: url('images/RCB1.jpg') center/cover no-repeat;
+            /* Solid RCB red background instead of image */
+            background-color: var(--primary-color);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -88,8 +90,8 @@
         }
 
         .hero .cta {
-            background: var(--primary-color);
-            color: #fff;
+            background: #fff;
+            color: var(--primary-color);
             padding: 0.75em 1.5em;
             border: none;
             border-radius: 2em;
@@ -99,7 +101,7 @@
         }
 
         .hero .cta:hover {
-            background: #c71b16;
+            background: #f0f0f0;
             transform: translateY(-3px);
         }
 
@@ -167,10 +169,10 @@
     </header>
 
     <section class="hero" id="hero">
-        <h1>RCB EE SALA CUP NAMDHEEE</h1>
-        <p>Pruthvi Siregere, Chalana Gowda, and the whole team welcome you to the ultimate fan experience. Join us to
-            celebrate every match!</p>
-        <button class="cta">Join the Fan Club</button>
+        <h1>RCB EE SALA CUP NAMDHEEE</n1>
+            <p>Pruthvi Siregere, Chalana Gowda, and the whole team welcome you to the ultimate fan experience. Join us
+                to celebrate every match!</p>
+            <button class="cta">Join the Fan Club</button>
     </section>
 
     <section class="team" id="team">
