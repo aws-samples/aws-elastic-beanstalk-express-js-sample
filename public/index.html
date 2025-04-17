@@ -26,7 +26,6 @@
         body {
             font-family: 'Roboto', sans-serif;
             color: var(--secondary-color);
-            /* Solid RCB red background instead of image */
             background-color: var(--primary-color);
             min-height: 100vh;
             display: flex;
@@ -115,15 +114,29 @@
 
         .member {
             background: #fff;
-            border-radius: 0.5em;
+            border-radius: 1em;
             overflow: hidden;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform var(--transition);
+            padding-bottom: 1em;
         }
 
         .member:hover {
             transform: translateY(-5px);
+        }
+
+        .emoji {
+            font-size: 5em;
+            margin: 1em auto 0.5em;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .member img {
@@ -133,13 +146,15 @@
         }
 
         .member h3 {
-            margin: 1em 0 0.5em;
+            margin: 0.5em 0 0.2em;
             font-size: 1.25em;
         }
 
         .member p {
-            margin: 0 1em 1em;
+            margin: 0 1em 0.5em;
             color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 0.5em;
         }
 
         footer {
@@ -160,7 +175,7 @@
 
 <body>
     <header>
-        <div class="logo">Royal Challengers Bangalore</div>
+        <div class="logo">RCB Fan Club</div>
         <nav>
             <a href="#hero">Home</a>
             <a href="#team">Team</a>
@@ -169,9 +184,9 @@
     </header>
 
     <section class="hero" id="hero">
-        <!-- <h1>RCB EE SALA CUP NAMDHEEE</n1>
-            <p>Pruthvi Siregere, Chalana Gowda, and the whole team welcome you to the ultimate fan experience. Join us
-                to celebrate every match!</p> -->
+        <!-- <h1>RCB EE SALA CUP NAMDHEEE</h1>
+        <p>Pruthvi Siregere, Chalana Gowda, and the whole team welcome you to the ultimate fan experience. Join us to
+            celebrate every match!</p> -->
         <button class="cta">Join the Fan Club</button>
     </section>
 
@@ -182,7 +197,7 @@
             <p>Lead Fan & Content Creator</p>
         </div>
         <div class="member">
-            <div class="emoji" aria-label="Girl Emoji">👩‍🦰</div>
+            <div class="emoji" aria-label="Girl Emoji">👩‍💻</div>
             <h3>Chalana Gowda</h3>
             <p>Community Manager</p>
         </div>
