@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Express Web Page</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e2231a;
+            /* RCB Red */
+            --secondary-color: #333;
+            --light-bg: rgba(255, 255, 255, 0.9);
+            --dark-bg: rgba(0, 0, 0, 0.6);
+            --transition: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: var(--light-bg);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        header nav a {
+            margin-left: 1.5em;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        header nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6em 1em 2em;
+            background: var(--dark-bg);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #eee;
+            margin-bottom: 1.5em;
+            max-width: 600px;
+        }
+
+        .hero .cta {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 2em;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .hero .cta:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2em;
+            padding: 4em 2em;
+            background: var(--light-bg);
+        }
+
+        .member {
+            background: #fff;
+            border-radius: 1em;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform var(--transition);
+            padding-bottom: 1em;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+        }
+
+        .emoji {
+            font-size: 5em;
+            margin: 1em auto 0.5em;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .member h3 {
+            margin: 0.5em 0 0.2em;
+            font-size: 1.25em;
+        }
+
+        .member p {
+            margin: 0 1em 0.5em;
+            color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 0.5em;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">RCB Club</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <!-- <h1>RCB EE SALA CUP NAMDHEEE</h1> -->
+        <p>Pruthvi Siregere, Chalana Gowda, and the whole team welcome you to the ultimate fan experience. Join us to
+            celebrate every match!</p>
+        <button class="cta">Not Join the Club</button>
+    </section>
+
+    <section class="team" id="team">
+        <div class="member">
+            <img src="images/RCB2.jpeg" alt="PRU Team">
+            <h3>Krishna</h3>
+            <p>Community Head</p>
+        </div>
+        <div class="member">
+            <img src="images/RCB1.jpg" alt="RCB Team">
+            <h3>Royal Challengers</h3>
+            <p>The Heart of the Club</p>
+        </div>
+        <div class="member">
+            <img src="images/RCB2.jpeg" alt="GOW Team">
+            <h3>Haryank</h3>
+            <p>Community Manager</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        &copy; 2025 RCB Fan Club. All rights reserved.
+    </footer>
+</body>
+
+</html>
