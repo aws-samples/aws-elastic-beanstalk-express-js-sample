@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample.git"
+    "url": "git+https://github.com/venkatakarthik94/CICD.git"
   },
   "license": "MIT-0",
   "dependencies": {
