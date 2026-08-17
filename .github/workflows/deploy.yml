@@ -1,0 +1,28 @@
+name : CI/CD Pipeline
+on:
+  push:
+   branches:
+    - main   # runs when you push to the main
+    
+  pull_request:
+   branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+       run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Deploy
+        run: echo "Deploying the application..."
+      
